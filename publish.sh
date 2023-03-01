@@ -16,7 +16,10 @@ if test $branch_name != $publish_branch
 then 
     # pull current branch commit
     git pull 
+    # push current branch commit
+    git push
     git checkout rc/publish
+    # pull publish branch
     git pull
     # merge crrent branch to publish branch
     git merge $branch_name
