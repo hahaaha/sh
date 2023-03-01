@@ -7,10 +7,10 @@ echo "current branch: $branch_name"
 git checkout rc/publish
 git pull
 # merge crrent branch to publish branch
-`git merge $branch_name`
+git merge $branch_name
 echo "merge success"
 # push op
 git push
 echo "publish success"
-`git checkout $branch_name`
+git checkout $branch_name
 echo "done"
