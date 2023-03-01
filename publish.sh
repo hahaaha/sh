@@ -25,8 +25,15 @@ then
     git merge $branch_name
     printf "${GREEN}merge success${RES}\r\n"
     # push op
-    git push
-    printf "${GREEN} publish success${RES}\r\n"
+    echo "sure push y/n:"
+    read status
+    if test $status == "y"
+    then
+        git push
+        printf "${GREEN} publish success${RES}\r\n"
+    else
+        printf "${YELLOW}jump push${RES}\r\n"
+    fi
     git checkout $branch_name
     echo "done"
 else 
