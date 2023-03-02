@@ -20,7 +20,6 @@ program.command('publish')
             name: 'question',
             message: 'do you need password'
         })
-        // git symbolic-ref --short HEAD
         if(response.question)  {
             console.log('log password')
         }
